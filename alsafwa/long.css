@@ -1,0 +1,89 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    direction: rtl;
+    background-color: #f4f4f4;
+}
+
+.waiting-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* الحاوية التي تحتوي على الصورة ونصف الدوائر */
+.rotating-container {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin-bottom: 20px;
+}
+
+/* الصورة الثابتة في المنتصف */
+.center-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* لجعل الصورة دائرية */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* لضمان بقاء الصورة فوق الدوائر */
+}
+
+/* نصف الدوائر */
+.half-circle {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #3498db;
+    border-radius: 50%; /* دائرة كاملة */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    z-index: 50; /* خلف الصورة */
+}
+
+/* نصف الدائرة العلوية */
+.top {
+    clip-path: inset(0 0 50% 0); /* إخفاء النصف السفلي */
+    animation: rotate 2s linear infinite;
+}
+
+/* نصف الدائرة السفلية */
+.bottom {
+    clip-path: inset(50% 0 0 0); /* إخفاء النصف العلوي */
+    animation: rotate 2s linear infinite reverse;
+}
+
+/* حركة الدوران */
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* النص */
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    
+}
+
+p {
+    font-size: 18px;
+    color: #424242;
+}

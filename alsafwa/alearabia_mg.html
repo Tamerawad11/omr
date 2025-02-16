@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المخزن - الصفوة</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            direction: rtl;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+        }
+        h2 {
+            margin: 0.5rem 0;
+        }
+        .container {
+            margin: 2rem auto;
+            max-width: 600px;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            margin: 1rem 0;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        form h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>الموقع: الورشة</h2>
+    </header>
+
+    <div class="container">
+        <form action="alearabia_op.php">
+            <h3>صرف مخزني</h3>
+            <input type="submit" value="ذهاب إلى">
+        </form>
+
+        <form action="alearabia_sr.php">
+            <h3>بحث داخل المخزن</h3>
+            <input type="submit" value="ذهاب إلى">
+        </form>
+
+        <form action="alearabia_ext.php">
+            <h3> اضافة قطع موجودة </h3>
+            <input type="submit" value="ذهاب إلى">
+        </form>
+
+        <form action="stelam.php">
+            <h3>كشف مخزني</h3>
+            <input type="submit" value="ذهاب إلى">
+        </form>
+
+        <form action="ext_er.php">
+            <h3>كشف مصروفات</h3>
+            <input type="submit" value="ذهاب إلى">
+        </form>
+
+        <form action="alearabia_mgbl.php">
+            <h3>استلام قطع غيار جديد
+            </h3>
+            <input type="submit" value="ذهاب إلى">
+        </form>
+
+      
+    </div>
+
+    <h4><a href="login_orsh.php">تسجيل خروج</a></h4>
+
+    <footer>
+        <p>© 2025 المخزن - الصفوة. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <meta http-equiv='refresh' content='60;url=login_orsh.php?search='>
+</body>
+</html>
